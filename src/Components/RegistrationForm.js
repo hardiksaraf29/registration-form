@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 let RegistrationForm = () => {
 
@@ -43,7 +44,7 @@ let RegistrationForm = () => {
                                     <form onSubmit={submit}>
                                         <div className="form-group">
                                             <label>Name</label>
-                                            <input className="form-control" type="text" placeholder="Username" name = "name" onChange={update}/>
+                                            <input className="form-control" type="text" placeholder="Username" name = "name" onChange={update} required/>
                                         </div>
                                             <div className="form-group">
                                                 <label>Email</label>
@@ -51,18 +52,17 @@ let RegistrationForm = () => {
                                             </div>
                                             <div className="form-group">
                                                 <label>Mobile Number</label>
-                                                <input className="form-control" type="text" placeholder="Mobile Number" name = "mobileNum" onChange={update}/>
+                                                <input className="form-control" type="text" placeholder="Mobile Number" name = "mobileNum" onChange={update} required/>
                                             </div>
                                             <div className="form-group">
                                                 <label>Address</label>
-                                                <textarea className="form-control" type="text" placeholder="Address" name = "address" onChange={update}></textarea>
+                                                <textarea className="form-control" type="text" placeholder="Address" name = "address" onChange={update} required></textarea>
                                             </div>
                                             <div className="form-group">
                                                 <label>Password</label>
-                                                <input className="form-control" type="password" placeholder="Enter password" name ="password" onChange={update}/>
+                                                <input className="form-control" type="password" placeholder="Enter password" name ="password" onChange={update} required/>
                                             </div>
-
-                                        <button className="btn btn-success">Submit</button>
+                                        <button className="btn btn-primary"><Link className="nav-link text-white" to='/LoginForm'>Submit</Link></button>
                                     </form>
                                 </div>
                             </div>

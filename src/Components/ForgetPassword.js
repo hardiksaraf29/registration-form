@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 let ForgetPassword = () => {
     return (
@@ -6,7 +7,7 @@ let ForgetPassword = () => {
             <section>
                 <div className="container mt-5">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-5">
                             <div className="card">
                                 <div className="card-header bg-light text-center">
                                     <h2>Reset Password</h2>
@@ -25,8 +26,7 @@ let ForgetPassword = () => {
                                             <label>Confirm Password</label>
                                             <input className="form-control" type="password" placeholder="Confirm password" />
                                         </div>
-
-                                        <button className="btn btn-success">Reset Password</button>
+                                        <button className="btn btn-success btn-sm " ><Link className="nav-link text-white" to='/LoginForm'>Reset Password</Link></button>
                                     </form>
                                 </div>
                             </div>
